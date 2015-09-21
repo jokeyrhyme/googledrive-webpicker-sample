@@ -1,0 +1,20 @@
+{
+  "name": "googledrive-webpicker-sample",
+  "version": "1.0.0",
+  "description": "attempts at presenting web users with a Google Drive document picker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jokeyrhyme/googledrive-webpicker-sample.git"
+  },
+  "keywords": [],
+  "author": "Ron Waldon (https://github.com/jokeyrhyme)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jokeyrhyme/googledrive-webpicker-sample/issues"
+  },
+  "homepage": "https://github.com/jokeyrhyme/googledrive-webpicker-sample#readme"
+}
