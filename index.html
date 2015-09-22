@@ -5,11 +5,28 @@
   <meta charset="utf-8" />
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="google-signin-scope" content="profile email" />
+  <meta name="google-signin-client_id" content="682951759387-sjmhnl9sbcl52gese43v14anjsv6l4c7.apps.googleusercontent.com" />
+
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
   <h1>Google Drive Web Picker Sample</h1>
+
+  <div class="g-signin2" data-onsuccess="onGoogleSignIn" data-theme="dark"></div>
+
   <footer>
     <a href="https://github.com/jokeyrhyme/googledrive-webpicker-sample">GitHub</a>
   </footer>
+
+  <script>
+    function onGoogleSignIn (googleUser) {
+      var profile = googleUser.getBasicProfile();
+      var id = profile.getId();
+      var idToken = googleUser.getAuthResponse().id_token;
+      window.console.log(id, idToken);
+    }
+  </script>
 </body>
 </html>

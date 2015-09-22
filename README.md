@@ -25,7 +25,7 @@ I'd also like to keep presentation separate from underlying behaviour.
 
 ## Todo
 
-- [ ] Google sign-in
+- [X] Google sign-in
 - [ ] Google Drive list existing documents
 - [ ] Google Drive create new document
 - [ ] Google Drive read existing document
