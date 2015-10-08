@@ -1,0 +1,7 @@
+{
+  "extends": ["@jokeyrhyme/es5"],
+  "env": {
+    "node": true
+  },
+  "root": true
+}
