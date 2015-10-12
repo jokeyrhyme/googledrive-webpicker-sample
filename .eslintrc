@@ -1,5 +1,5 @@
 {
-  "extends": ["@jokeyrhyme/es5"],
+  "extends": ["react", "@jokeyrhyme/es5"],
   "env": {
     "node": true
   },
