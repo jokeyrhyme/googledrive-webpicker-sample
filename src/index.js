@@ -2,15 +2,17 @@
 
 // local modules
 
-import GoogleDriveDocumentsProvider from './GoogleDriveDocumentsProvider';
+import { googleDrive } from './stamps/googleDrive';
 
 // this module
 
 global.console.log('index.js');
-global.console.log(Object.keys(global.gapi));
 
-const docsProvider = new GoogleDriveDocumentsProvider();
+const docs = googleDrive();
 
 // global.console.log(docsProvider.queryChildDocuments('/'));
 
-docsProvider.listFiles();
+global.console.log(docs.queryRoots());
+
+docs.queryChildDocuments('appfolder');
+docs.queryChildDocuments('root');
