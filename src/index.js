@@ -1,18 +1,9 @@
 'use strict';
 
-// local modules
+// foreign modules
 
-import { googleDrive } from './stamps/googleDrive';
+import {} from './components/App';
 
 // this module
 
 global.console.log('index.js');
-
-const docs = googleDrive();
-
-// global.console.log(docsProvider.queryChildDocuments('/'));
-
-global.console.log(docs.queryRoots());
-
-docs.queryChildDocuments('appfolder');
-docs.queryChildDocuments('root');

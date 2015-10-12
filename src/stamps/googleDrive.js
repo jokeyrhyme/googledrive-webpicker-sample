@@ -83,32 +83,31 @@ export const googleDrive = stampit.methods({
       return new Promise((resolve, reject) => {
         request.execute((res) => {
           if (!res || !Array.isArray(res.items)) {
-            global.console.log('GoogleDriveDocumentsProvider#queryChildDocuments()', 'nothing');
+            global.console.log('googleDrive#queryChildDocuments()', 'nothing');
             reject(new Error('nothing'));
             return;
           }
-          global.console.log(res);
-          resolve();
+          resolve(res);
         });
       });
     });
   },
 
   queryDocument (documentId) {
-    return loadDriveApi().then(() => {
+    return loadDriveApi({ scope: SCOPE_READ_ONLY })
+    .then(() => {
       const request = global.gapi.client.drive.files.get({
         fileId: documentId
       });
 
       return new Promise((resolve, reject) => {
         request.execute((res) => {
-          if (!res || !Array.isArray(res.result)) {
-            global.console.log('GoogleDriveDocumentsProvider#queryDocument()', 'nothing');
+          global.console.log('googleDrive#queryDocument()', res);
+          if (!res || !res.result) {
             reject(new Error('nothing'));
             return;
           }
-          global.console.log(res);
-          resolve();
+          resolve(res);
         });
       });
     });
